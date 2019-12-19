@@ -1,0 +1,43 @@
+00:21:37	Stephen Kurlow:	birthdate will have timezone?
+00:22:35	Stephen Kurlow:	what about versioning of iscAnimalCore and other types?
+00:23:52	Stephen Kurlow:	lengths of fields will be spec’d?
+00:24:13	David Waldie:	If this is to be used internationally, wouldn't it be better to use UTC instead of local time zone?
+00:24:13	Stephen Kurlow:	what are valid chars for each field for strings?
+00:24:43	Stephen Kurlow:	UTC is fine
+00:24:47	Sam Bartlett:	UTC definitely seems the right choice to me.
+00:25:36	Stephen Kurlow:	can validation of chars be expressed as a regex to avoid misinterpretation?
+00:27:25	Kenny Sabir:	It would if the alternative IDs could be identified by something.. e.g. so we can keep track of different products IDs throughout the system.
+00:28:50	Graham Glover:	Possible room for a historical animal data schema vs snapshot? 
+00:29:03	Sam Bartlett:	Except for Gender I think the AnimalCore stuff is relatively static, especially if identifier is a stackable list (eg a new EID tag comes in, but the old one remains; perhaps that needs a timestamp? ) 
+00:29:13	Kenny Sabir:	Also we note that in Animal Data Standards, Gender is split between sex and fertility potential … e.g. Male / Neutered as separate properties… this seems better to us.
+00:29:18	Sam Bartlett:	* and status
+00:32:34	David Waldie:	Which people call species in their systems bovine verses cattle?
+00:33:06	Kenny Sabir:	* It would *be good* if the alternative IDs …
+00:38:41	Stephen Kurlow:	I’m not an expert on animal types but what about Camels, Kangaroos…maybe more?
+00:38:53	David Rubie:	For me there just weren't enough species to justify making sub categories.  One species identifier is enough for us
+00:39:35	ttkachenko:	From and ISC perspective, it is likely that Alpaca's and Llamas will be incorporated into our DB
+00:39:49	Sam Bartlett:	Cattle / Sheep here.
+Gender is a bit wider in our context, in order to map to various external systems. 
+There is an open project mapping them back to canonical values.
+00:39:55	Vernon van Duijnhoven:	Each species defined by integer value in database. Presented to user as "Cattle", "Sheep", etc.
+00:43:27	David Rubie:	re breeds:  are we expected to audit the breed fraction vs the actual parentage?
+00:44:32	Vernon van Duijnhoven:	Should "wool" be "fibre"?
+00:44:32	David Rubie:	cool!
+00:49:00	David Rubie:	I like the birth date idea as well - can record anything from drop year right up to actual date works well
+00:49:32	David Rubie:	Litter size?
+00:50:20	David Rubie:	Litter size might make more sense
+00:50:35	Lewis Frost:	what do you say for rearing then? rearing litter size
+00:50:40	David Waldie:	Is this relevant for all species?
+00:51:27	David Rubie:	rearing litter size is hard because you need a cut off date where you declare that was the litter size that affected performance
+00:51:52	David Waldie:	but wouldn't there be some mandatory fields in the input?
+00:51:53	Graham Glover:	drop number?
+00:52:57	Graham Glover:	agree GitHub is the best platform for field definition agreement
+00:53:05	David Rubie:	sounds good re: litter size and performance
+00:54:22	David Rubie:	You might need an entire genetic grouping section rather than the integers
+00:54:31	David Rubie:	For most animal recording it isn't relevant
+00:58:46	Daniel Brown:	Something we have had to deal with in Sheep Genetics is fields to reflect how pedigree was determined. eg Mothering up / lambing rounds, DNA, association tags, pedigree matchmaker etc. more examples http://legacy.sheepgenetics.org.au/XSD/2/0/0/sheepgenetics.xsd#type_pedigreetype
+00:58:50	Lewis Frost:	confidence in parentage results
+00:59:02	Lewis Frost:	adopting a AEU system perhaps?
+00:59:06	David Waldie:	would you need to know where the animal is located if not deceased?
+01:02:18	Stephen Kurlow:	i don’t recall if birthDate is on there. or is that captured in another entity perhaps BirthEvent?
+01:03:02	Stephen Kurlow:	and with that where the animal was born? lat/lon or?
