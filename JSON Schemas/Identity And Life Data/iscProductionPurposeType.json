@@ -1,0 +1,13 @@
+{
+    "properties": {
+        "iscProductionPurposeType": {
+            "type": "string",
+            "description": "Defines the primary product for which this anila is bred of kept.",
+            "enum": [
+                "Meat",
+                "Milk",
+                "Wool"
+            ]
+        }
+    }
+}
