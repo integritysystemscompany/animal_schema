@@ -3,21 +3,21 @@ info:
   title: MLA Identity And Life Data Example
   version: 0.0.1
 paths:
-  /animal:
+  /animal/{identifier}:
     get:
       description: |
         Returns the details for the specified animal
       operationId: findPets
       parameters:
         - name: identifier
-          in: query
+          in: path
           description: primary identifier for the animal
           required: true
           schema:
             type: string
       responses:
         '200':
-          description: pet response
+          description: animal response
           content:
             application/json:
               schema:
@@ -33,7 +33,7 @@ paths:
       operationId: updateAnimal
       parameters:
         - name: identifier
-          in: query
+          in: path
           description: primary identifier for the animal
           required: true
           schema:
@@ -47,7 +47,7 @@ paths:
               $ref: '#/iscAnimalCore'
       responses:
         '200':
-          description: pet response
+          description: animal response
           content:
             application/json:
               schema:
@@ -58,45 +58,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pets/{id}:
-    get:
-      description: Returns a user based on a single ID, if the user does not have access to the pet
-      operationId: find pet by id
-      parameters:
-        - name: id
-          in: path
-          description: ID of pet to fetch
-          required: true
-          schema:
-            type: integer
-            format: int64
-      responses:
-        '200':
-          description: pet response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pet'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
     delete:
-      description: deletes a single pet based on the ID supplied
-      operationId: deletePet
+      description: deletes a single animal based on the ID supplied
+      operationId: deleteAnimal
       parameters:
-        - name: id
+        - name: identifier
           in: path
-          description: ID of pet to delete
+          description: primary identifier for the animal to delete
           required: true
           schema:
-            type: integer
-            format: int64
+            type: string
       responses:
         '204':
-          description: pet deleted
+          description: animal deleted
         default:
           description: unexpected error
           content:
