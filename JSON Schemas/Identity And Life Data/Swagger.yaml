@@ -77,7 +77,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /farm/{id?/animals:
+  /farm/{id}/animals:
     get:
       description: |
         Returns the list of animals for the farm
