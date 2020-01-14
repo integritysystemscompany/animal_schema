@@ -20,7 +20,7 @@ paths:
           content:
             application/json:
               schema:
-                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON Schemas/Identity And Life Data/iscAnimalCore.json#iscAnimalCore'
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
         default:
           description: unexpected error
           content:
@@ -43,14 +43,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/iscAnimalCore'
+              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
       responses:
         '200':
           description: animal response
           content:
             application/json:
               schema:
-                $ref: '#/iscAnimalCore'
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
         default:
           description: unexpected error
           content:
@@ -77,16 +77,16 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
   /farm/{id}/animals:
+    parameters:
+      - name: id
+        in: path
+        description: primary identifier for the farm
+        required: true
+        schema:
+          type: string
     get:
       description: Returns the list of animals for the farm
       operationId: findAnimals
-      parameters:
-        - name: id
-          in: path
-          description: primary identifier for the farm
-          required: true
-          schema:
-            type: string
       responses:
         '200':
           description: animal response
@@ -95,7 +95,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/iscAnimalCore'
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
         default:
           description: unexpected error
           content:
@@ -113,7 +113,7 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/iscAnimalCore'
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
       responses:
         '200':
           description: animals response
@@ -122,7 +122,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/iscAnimalCore'
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
         default:
           description: unexpected error
           content:
