@@ -106,21 +106,25 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       description: Creates new animals for the farm
-      operationId: addPet
+      operationId: addAnimals
       requestBody:
-        description: Pet to add to the store
+        description: Animals to add to the farm
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/NewPet'
+              type: array
+              items:
+                $ref: '#/iscAnimalCore'
       responses:
         '200':
-          description: pet response
+          description: animals response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Pet'
+                type: array
+                items:
+                  $ref: '#/iscAnimalCore'
         default:
           description: unexpected error
           content:
