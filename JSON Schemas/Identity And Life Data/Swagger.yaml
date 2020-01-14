@@ -5,8 +5,7 @@ info:
 paths:
   /animal/{identifier}:
     get:
-      description: |
-        Returns the details for the specified animal
+      description: Returns the details for the specified animal
       operationId: findAnimal
       parameters:
         - name: identifier
@@ -79,8 +78,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /farm/{id}/animals:
     get:
-      description: |
-        Returns the list of animals for the farm
+      description: Returns the list of animals for the farm
       operationId: findAnimals
       parameters:
         - name: id
