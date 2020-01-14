@@ -20,7 +20,7 @@ paths:
           content:
             application/json:
               schema:
-                  $ref: '#/iscAnimalCore'
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON Schemas/Identity And Life Data/iscAnimalCore.json#iscAnimalCore'
         default:
           description: unexpected error
           content:
