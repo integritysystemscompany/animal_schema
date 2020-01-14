@@ -7,7 +7,7 @@ paths:
     get:
       description: |
         Returns the details for the specified animal
-      operationId: findPets
+      operationId: findAnimal
       parameters:
         - name: identifier
           in: path
@@ -77,29 +77,58 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /farm/{id?/animals:
+    get:
+      description: |
+        Returns the list of animals for the farm
+      operationId: findAnimals
+      parameters:
+        - name: id
+          in: path
+          description: primary identifier for the farm
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: animal response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/iscAnimalCore'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      description: Creates new animals for the farm
+      operationId: addPet
+      requestBody:
+        description: Pet to add to the store
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewPet'
+      responses:
+        '200':
+          description: pet response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
-    Pet:
-      allOf:
-        - $ref: '#/components/schemas/NewPet'
-        - type: object
-          required:
-          - id
-          properties:
-            id:
-              type: integer
-              format: int64
-
-    NewPet:
-      type: object
-      required:
-        - name  
-      properties:
-        name:
-          type: string
-        tag:
-          type: string    
-
     Error:
       type: object
       required:
