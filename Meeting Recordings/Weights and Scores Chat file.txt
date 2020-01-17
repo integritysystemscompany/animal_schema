@@ -1,0 +1,15 @@
+00:18:01	Stephen Kurlow:	should be a noun
+00:18:11	Stephen Kurlow:	if weight is noun then use that
+00:18:19	Joel Rockes:	weight
+00:22:41	Stephen Kurlow:	does weight only allow a certain maximum number of dec places?
+00:22:51	Stephen Kurlow:	or is it a whole number?
+00:27:47	Stephen Kurlow:	US customers may not like amounts stored as metric
+00:27:55	Stephen Kurlow:	will be rounding errors?
+00:28:03	Stephen Kurlow:	when viewing their stored numbers
+00:28:53	Stephen Kurlow:	if force amounts to be stored as metric when they prefer imperial
+00:30:03	David Rubie:	Resolution is a decent substitute for precision
+00:43:21	udeni:	when recording weights , i think important to manage the assumptions. ex. Record nearest Kilograms
+00:51:23	Graham Glover:	group?
+00:56:03	Sushil Dutt:	Can range have decimal places?
+01:03:27	Gus Rose:	Looks like everything covered for weight for us apart perhaps groups. Thanks
+01:03:30	Graham Glover:	Sounds good - Thanks Andrew.
