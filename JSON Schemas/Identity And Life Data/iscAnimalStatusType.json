@@ -1,0 +1,14 @@
+{
+    "properties": {
+        "iscAnimalStatusType": {
+            "type": "string",
+            "description": "Defines the status of the animal either aboslutely and/or with reference to the location on which it is recorded",
+            "enum": [
+                "Alive",
+                "Dead",
+                "Off-farm",
+                "Unknown"
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "properties": {
+        "iscAnimalSpecieType": { 
+            "type": "string",
+            "description": "Enumeration for species of animal using English names",
+            "enum": [
+                "Buffalo",
+                "Deer",
+                "Elk",
+                "Goat",
+                "Horse",
+                "Pig",
+                "Sheep"
+            ]
+        }
+    }
+}

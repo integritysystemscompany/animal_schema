@@ -1,0 +1,56 @@
+{
+    "required": [
+
+    ],
+
+    "type": "object",
+
+    "allOf": [
+        {
+            "$ref": "icarAnimalCoreResource.json"
+        },
+        {
+            "properties": {
+                "birthDateConfidence": {
+                    "type": "string",
+                    "description": "3-character string with positional characters represeting Year, Month, and Day (YMD)"
+                },
+                "birthRank": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "A value describing the number of progeny born to the same dam in the same birth event."
+                },
+                "rearingRank": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Rearing rank is used to indicate the number of progeny reared by the same dame during the same lactation."
+                },
+                "birthCohort": {
+                    "type": "number",
+                    "description": "The contempory group or cohort that describes the season within the birth year into which animals are categorised."
+                },
+                "preBirthMod": {
+                    "type": "number",
+                    "description": "Mob ewe prior to lambing"
+                },
+                "postBirthMob": {
+                    "type": "number",
+                    "description": "Mob ewe post lambing"
+                },
+                "breedSocSECode": {
+                    "type": "string",
+                    "description": "Breed Society Single Entry Code"
+                },
+                "breedSocRegStatus": {
+                    "type": "string",
+                    "description": "",
+                    "enum": [
+                        "N",
+                        "R",
+                        "NULL"
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "required": [
+
+    ],
+
+    "type": "object",
+    
+    "allOf": [
+        { 
+            "$ref": "icarParentageType.json"
+        }
+    ]
+}
