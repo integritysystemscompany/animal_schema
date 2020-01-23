@@ -1,0 +1,144 @@
+openapi: "3.0.0"
+info:
+  title: MLA Identity And Life Data Example
+  version: 0.0.1
+paths:
+  /animal/{identifier}:
+    get:
+      description: Returns the details for the specified animal
+      operationId: findAnimal
+      parameters:
+        - name: identifier
+          in: path
+          description: primary identifier for the animal
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: animal response
+          content:
+            application/json:
+              schema:
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      description: Updates the specified animal
+      operationId: updateAnimal
+      parameters:
+        - name: identifier
+          in: path
+          description: primary identifier for the animal
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Updated details for the animal
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
+      responses:
+        '200':
+          description: animal response
+          content:
+            application/json:
+              schema:
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: deletes a single animal based on the ID supplied
+      operationId: deleteAnimal
+      parameters:
+        - name: identifier
+          in: path
+          description: primary identifier for the animal to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: animal deleted
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /farm/{id}/animals:
+    parameters:
+      - name: id
+        in: path
+        description: primary identifier for the farm
+        required: true
+        schema:
+          type: string
+    get:
+      description: Returns the list of animals for the farm
+      operationId: findAnimals
+      responses:
+        '200':
+          description: animal response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      description: Creates new animals for the farm
+      operationId: addAnimals
+      requestBody:
+        description: Animals to add to the farm
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
+      responses:
+        '200':
+          description: animals response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
