@@ -14,7 +14,7 @@
                 "fraction": {
                     "type": "number",
                     "format": "double",
-                    "description": "The proportion of the denomitor that thiws breed comprises"
+                    "description": "The proportion of the denomitor that this breed comprises"
                 },
                 "denominator": {
                     "type": "number",

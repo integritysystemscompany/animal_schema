@@ -29,7 +29,7 @@
                     "type": "number",
                     "description": "The contempory group or cohort that describes the season within the birth year into which animals are categorised."
                 },
-                "preBirthMod": {
+                "preBirthMob": {
                     "type": "number",
                     "description": "Mob ewe prior to lambing"
                 },
