@@ -1,0 +1,30 @@
+{
+    "required": [
+    ],
+
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "iscScoreEventCore.json"
+        },
+        {
+            "properties": {
+                "muscleScoreReference": {
+                    "type": "object",
+                    "$ref": "iscScoreReference.json",
+                    "description": "The scheme or scoring reference guideline being used"
+                },
+                "score":{
+                    "type": "string",
+                    "enum": ["A", "B", "C", "D", "E"],
+                    "description": "Value of the muscle score"
+                },
+                "traitLabel": {
+                    "type": "object",
+                    "$ref": "icarIdentifierType.json",
+                    "description": "Identifies the intended formal trait using scheme and ID. For instance: nz.sheep.traits, LW8"
+                }
+            }
+        }
+    ]
+}

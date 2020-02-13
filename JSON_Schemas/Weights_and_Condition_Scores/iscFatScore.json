@@ -1,0 +1,46 @@
+{
+    "required": [
+    ],
+
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "iscScoreEventCore.json"
+        },
+        {
+            "properties": {
+                "fatScoreReference": {
+                    "type": "object",
+                    "$ref": "iscScoreReference.json",
+                    "description": "The scheme or scoring reference guideline being used"
+                },
+                "score": {
+                    "type": "number",
+                    "description": "Value of the fat score"
+                },
+                "fatDepths": {
+                    "type": "array",
+                    "objects": {
+                        "type": "object",
+                        "properties": {
+                            "bodySite": {
+                                "type": "string",
+                                "description": "Body Site where the measurement was taken"
+                            },
+                            "fatDepth": {
+                                "type": "number",
+                                "format": "double",
+                                "description": "Usually measure in Millimeters"
+                            }
+                        }
+                    }
+                },
+                "traitLabel": {
+                    "type": "object",
+                    "$ref": "icarIdentifierType.json",
+                    "description": "Identifies the intended formal trait using scheme and ID. For instance: nz.sheep.traits, LW8"
+                }
+            }
+        }
+    ]
+}

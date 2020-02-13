@@ -1,0 +1,29 @@
+{
+    "required": [
+    ],
+
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "iscScoreEventCore.json"
+        },
+        {
+            "properties": {
+                "frameScoreReference": {
+                    "type": "object",
+                    "$ref": "iscScoreReference.json",
+                    "description": "The scheme or scoring reference guideline being used"
+                },
+                "score":{
+                    "type": "number",
+                    "description": "Value of the frame score"
+                },
+                "traitLabel": {
+                    "type": "object",
+                    "$ref": "icarIdentifierType.json",
+                    "description": "Identifies the intended formal trait using scheme and ID. For instance: nz.sheep.traits, LW8"
+                }
+            }
+        }
+    ]
+}

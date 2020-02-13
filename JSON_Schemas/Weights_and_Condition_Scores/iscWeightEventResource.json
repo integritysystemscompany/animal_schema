@@ -1,0 +1,53 @@
+{
+    "required": [
+        "weight",
+        "units"
+    ],
+
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "properties": {
+                "weight": {
+                    "type": "number",
+                    "format": "double",
+                    "description": "The weight observation, in the units specified (usually kilograms)"
+                },
+                "units": {
+                    "type": "string",
+                    "enum": ["KGM", "GRM", "LBR", "TNE", "MC", "MGM"],
+                    "default": "KGM",
+                    "description": "Units specified in UN/CEFACT 3-letter form. Default if not specified is KGM. Mass units for weight from UN/CEFACT trade facilitation recommendation 20.\r\n Kilogram, Gram, Pound, Metric Tonne, Microgram, Miligram."
+                },
+                "method": {
+                    "type": "string",
+                    "enum": ["Loadcell", "Girth", "Assessed", "WalkOver", "Predicted", "Imaged", "FrontEndCorrelated", "GroupAverage"],
+                    "description": "Method by which the weight is observed"
+                },
+                "resolution":{
+                    "type": "number",
+                    "format": "double",
+                    "description": "The smallest measurement difference that can be discriminated given the current device settings. Specified in Units, for instance 0.5 (kilograms)."
+                },
+                "device": {
+                    "type": "object",
+                    "$ref": "icarDeviceReferenceType",
+                    "description": "Optional information about the device used for the measurement."
+                },
+                "traitLabel": {
+                    "type": "object",
+                    "$ref": "icarIdentifierType",
+                    "description": "Identifies the intended formal trait using scheme and ID. For instance: nz.sheep.traits, LW8"
+                },
+                "timeOffFeed": {
+                    "type": "number",
+                    "format": "double",
+                    "description": "Time in hours the animal has been off feed"
+                }
+            }
+        }
+    ]
+}
