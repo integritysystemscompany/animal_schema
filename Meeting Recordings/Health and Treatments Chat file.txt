@@ -1,0 +1,32 @@
+00:06:08	vsuttor:	Verity and Don Colantonio from ISC
+00:06:16	vsuttor:	Having issues with my microphone
+00:09:32	Kenny Sabir:	Also Dose can also use the Measurement object since its date has been removed.
+00:11:31	vsuttor:	Don't think it matters
+00:20:19	vsuttor:	Does this include vaccinations 
+00:24:07	vsuttor:	AVPMA government regulations for registration drugs
+00:25:47	PeterR:	- agree
+00:28:40	Vernon van Duijnhoven:	Why have multiple "responsible" persons?
+00:30:30	Vernon van Duijnhoven:	Multiple levels seems a little redundant and confusing.
+00:34:10	Kenny Sabir:	If the course is a plan, why is the treatment not used? The program still says EITHER OR, but in the course of a plan then the treatments are still used.
+00:34:42	vsuttor:	Do we need the intended course?
+00:36:31	vsuttor:	Why not have an extra attribute for vaccincation treatment as it not really a medicine
+00:38:20	vsuttor:	That is true. Most of our farmers categories vaccination as different to medicine
+00:41:11	vsuttor:	Our producers work on markets - domestic verse EU
+00:41:38	vsuttor:	Agree
+00:46:29	vsuttor:	Yes
+00:46:59	vsuttor:	You need to be specific
+00:47:23	Vernon van Duijnhoven:	Agree. Specific is best.
+00:48:45	Vernon van Duijnhoven:	Ok, makes sense.
+00:49:12	vsuttor:	Missed exposure
+00:49:29	vsuttor:	Example toxic plants
+00:49:35	vsuttor:	lead
+00:49:45	vsuttor:	animal fat products
+00:49:51	vsuttor:	cotton trash
+00:50:04	vsuttor:	YEs it sdifferent
+00:50:22	vsuttor:	No cant do that
+00:50:39	vsuttor:	Sure - possible exposure is good
+00:50:56	vsuttor:	It will also align to the health treatment declaration
+00:51:53	vsuttor:	Sure - we would like treatment method
+00:52:42	vsuttor:	Its too confusing for producers. However might work for the backend
+00:55:42	vsuttor:	Thank you very much for everyones contribution today. We really apprecaite
+00:55:47	PeterR:	Thanks A

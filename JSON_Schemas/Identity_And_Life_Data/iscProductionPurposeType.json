@@ -1,0 +1,13 @@
+{
+    "properties": {
+        "iscProductionPurposeType": {
+            "type": "string",
+            "description": "Defines the primary product for which this animal is bred or kept.",
+            "enum": [
+                "Meat",
+                "Milk",
+                "Wool"
+            ]
+        }
+    }
+}
