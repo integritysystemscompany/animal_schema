@@ -17,14 +17,13 @@
                     "description": "The weight observation, in the units specified (usually kilograms)"
                 },
                 "units": {
-                    "type": "string",
-                    "enum": ["KGM", "GRM", "LBR", "TNE", "MC", "MGM"],
-                    "default": "KGM",
+                    "type": "object",
+                    "$ref": "uncefactMassUnitsType.json",
                     "description": "Units specified in UN/CEFACT 3-letter form. Default if not specified is KGM. Mass units for weight from UN/CEFACT trade facilitation recommendation 20.\r\n Kilogram, Gram, Pound, Metric Tonne, Microgram, Miligram."
                 },
                 "method": {
-                    "type": "string",
-                    "enum": ["Loadcell", "Girth", "Assessed", "WalkOver", "Predicted", "Imaged", "FrontEndCorrelated", "GroupAverage"],
+                    "type": "object",
+                    "$ref": "icarWeightMethodType.json",
                     "description": "Method by which the weight is observed"
                 },
                 "resolution":{
