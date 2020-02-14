@@ -12,26 +12,6 @@
                 "assessor": {
                     "type": "string",
                     "description": "Name of the assessor"
-                },
-                "iscFatScore": {
-                    "type": "object",
-                    "$ref": "iscFatScore",
-                    "description": "Event object for capturing Fat Score details"
-                },
-                "iscConditionScore": {
-                    "type": "object",
-                    "$ref": "iscConditionScore",
-                    "description": "Event object for capturing Condition Score details"
-                },
-                "iscFrameScore": {
-                    "type": "object",
-                    "$ref": "iscFrameScore",
-                    "description": "Event object for capturing Frame Score details"
-                },
-                "iscMuscleScore": {
-                    "type": "object",
-                    "$ref": "iscMuscleScore",
-                    "description": "Event object for capturing Muscle Score details"
                 }
             }
         }
