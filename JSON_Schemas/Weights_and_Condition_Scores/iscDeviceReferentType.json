@@ -1,0 +1,27 @@
+{
+    "required": [
+    ],
+
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarDeviceReferenceType.json"
+        },
+        {
+            "properties": {
+              "icarResourceReferenceType":{
+                "type": "object",
+                "$ref": "icarResourceReferenceType.json",
+                "description": "https://github.com/adewg/ICAR/blob/master/Release%20Candidate%20Messages/icarResourceReferenceType.json"
+               },
+               "model": {
+                "type": "string",
+                "description": "ICAR registered device model, which represents manufacturer, model, hardware and software versions."
+               },
+               "serial": {
+                "type": "string",
+                "description": "Optionally, the serial number of the device."
+            }
+        }
+     ]
+}
