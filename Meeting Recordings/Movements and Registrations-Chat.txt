@@ -1,0 +1,9 @@
+00:16:20	Vernon van Duijnhoven:	Why is "Sale" in the arrival event?
+00:25:24	Sushil Dutt:	Are these attributes been socialied with NAIT, NLIS etc.? We are aware that NAIT is in process of replacing their exisiting endpoints.
+00:29:04	Heidi Perrett:	departureKind lists the same options as arrivalReason. If the options are the same why don’t they use the same naming?
+00:34:23	Vernon van Duijnhoven:	Do we need to have additional details regarding registration … who, what, where.
+00:37:57	Vernon van Duijnhoven:	Agree.
+00:55:38	Sushil Dutt:	Change of ownership- what about gifting and inherited?
+00:59:10	PeterR:	There is a quite a deep discussion about Lot - should engage with Livestock Exchange folks to unpick.
+01:01:05	PeterR:	Same also for Transaction - on-off farm transactions quite simple but through formal market sale processes more detail required.
+01:06:47	PeterR:	I wonder if there is also a discussion about recording Chain of Responsibility as part of animal movements.
