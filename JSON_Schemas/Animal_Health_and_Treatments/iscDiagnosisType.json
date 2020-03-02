@@ -1,0 +1,26 @@
+{
+    "required": [],
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier for this diagnosis"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name indicating the health condition diagnosed"
+        },
+        "description": {
+            "type": "string",
+            "description": "Description for the diagnosis"
+        },
+        "veNomCode": {
+            "type": "string",
+            "description": "VeNom diagnosis code.   refer to http://www.venomcoding.org/"
+        },
+        "site": {
+            "type": "string",
+            "description": "Site of diagnosis"
+        }
+    }
+}

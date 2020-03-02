@@ -1,0 +1,60 @@
+{
+    "required": [],
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "properties": {
+                "medicine": {
+                    "type": "object",
+                    "$ref": "iscMedicineResource.json",
+                    "description": "the Medicine used in this treatment if applicable"
+                },
+                "procedure": {
+                    "type": "string",
+                    "description": "Medicine application method or non-medicine procedure"
+                },
+                "batches": {
+                    "type": "array",
+                    "items": {
+                        "properties":{
+                            "id": {
+                                "type": "string",
+                                "description": "batch id or number"
+                            },
+                            "expiryDate": {
+                                "type": "string",
+                                "format": "dateTime",
+                                "description": "expiration date of the batch"
+                            }
+                        }
+                    },
+                    "description": "Batches and expiry details of the medicine administered"
+                },
+                "withdrawals": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "$ref": "iscWithdrawalType.json"
+                    },
+                    "description": "Provides withholding details for the treatment administered"
+                },
+                "dose": {
+                    "type": "object",
+                    "$ref": "iscDoseType.json",
+                    "description": "Details of medicine dose administered"
+                },
+                "site": {
+                    "type": "string",
+                    "description": "Body site where the treatment was administered"
+                },
+                "responsible": {
+                    "type": "string",
+                    "description": "Person responsible for the treatment"
+                }
+            }
+        }
+    ]
+}

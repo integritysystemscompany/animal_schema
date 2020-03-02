@@ -1,0 +1,16 @@
+{
+    "required": [],
+    "type": "object",
+    "properties": {
+        "productType": {
+            "type": "string",
+            "enum": ["Milk","Meat","Eggs","Honey","Velvet"],
+            "description": "Type of withholding that applies to the specific food chain as a result of the treatment administered"
+        },
+        "endDate": {
+            "type":"string",
+            "format": "dateTime",
+            "description": "Date till when the withholding applies"
+        }
+    }
+}
