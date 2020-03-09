@@ -1,0 +1,28 @@
+{
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "description of the transaction item"
+        },
+        "quantity": {
+            "type": "number",
+            "format": "double",
+            "description": "number of kilograms or head or whatever the basis is"
+        },
+        "value": {
+            "type": "number",
+            "format": "double",
+            "description": "the value per kilogram or head or whatever"
+        },
+        "discount": {
+            "type": "number",
+            "format": "double",
+            "description": "a discount factor such as 0.25 to apply a 25% discount"
+        },
+        "subtotal": {
+            "type": "number",
+            "format": "double",
+            "description": "total of (value * quantity) * (1 - discount)"
+        }
+    }
+}
