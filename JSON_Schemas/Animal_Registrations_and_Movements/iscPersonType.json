@@ -1,0 +1,28 @@
+{
+    "properties": {
+        "givenName": {
+            "type": "string",
+            "description": "First name of the person"
+        },
+        "familyName": {
+            "type": "string",
+            "description": "Surname of the person"
+        },
+        "email": {
+            "type": "string",
+            "description": "Email address"
+        },
+        "telephone": {
+            "type": "string",
+            "description": "Telephone contact"
+        },
+        "jobTitle": {
+            "type": "string",
+            "description": "the job or position the person holds"
+        },
+        "licenceCredential": {
+            "type": "string",
+            "description": "Licence Id of the person pertaining to the prefessional body he/she belongs to"
+        }
+    }
+}

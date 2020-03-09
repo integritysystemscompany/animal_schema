@@ -1,0 +1,72 @@
+{
+    "required": [],
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarConsignmentType.json"
+        },
+        {
+            "properties": {
+                "id": {
+                    "type": "object",
+                    "$ref": "icarIdentiferType.json",
+                    "description": "Offical identifier for the movement"
+                },
+                "origin": {
+                    "type": "object",
+                    "$ref": "iscOrganisationType.json",
+                    "description": ""
+                },
+                "destination": {
+                    "type": "object",
+                    "$ref": "iscOrganisationType.json",
+                    "description": ""
+                },
+                "loadingDateTime": {
+                    "type": "object",
+                    "$ref": "icarDateTimeType.json",
+                    "description": "Date and time animals were loaded for transport, including time zone (UTC preferred)"
+                },
+                "unloadingDateTime": {
+                    "type": "object",
+                    "$ref": "icareDateTimeType.json",
+                    "description": "Date and time animals were unloaded after transport, including time zone (UTC preferred)"
+                },
+                "expectedDuration": {
+                    "type": "number",
+                    "description": "Expected duration of transportation in hours"
+                },
+                "vehicles": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Identification of the vehicle (for example, licence plate)"
+                },
+                "transportReference": {
+                    "type": "string",
+                    "description": "Shipping or transport reference"
+                },
+                "isolationFacilityUsed":{
+                    "type": "boolean",
+                    "description": "True is an isolation facility was used for the movement"
+                },
+                "farmAssuranceReference": {
+                    "type": "object",
+                    "$ref": "icarIdentiferType.json",
+                    "description": "Indentification reference of a farm assurance operation"
+                },
+                "responsible": {
+                    "type": "object",
+                    "$ref": "iscPersonType.json",
+                    "description": "Person who has authorised the movement"
+                },
+                "transporter": {
+                    "type" : "object",
+                    "$ref": "iscPersonType.json",
+                    "description": "Person or driver who is transporting the stock"
+                }
+            }
+        }
+    ]
+}

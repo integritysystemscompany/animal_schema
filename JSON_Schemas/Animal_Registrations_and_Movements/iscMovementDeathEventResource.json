@@ -1,0 +1,35 @@
+{
+    "required": ["deathReason", "disposalMethod", "disposalReference"],
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "properties": {
+                "deathReason": {
+                    "type": "object",
+                    "$ref": "icarDeathReasonType.json",
+                    "description": "Coded reasons for death including disease, parturition complications, consumption by humans or animals"
+                },
+                "explanation": {
+                    "type": "string",
+                    "description": "Free text explanation of the reason for death"
+                },
+                "disposalMethod": {
+                    "type": "string",
+                    "enum": ["Approved Service", "Consumption", "On-premise", "Other"],
+                    "description": "Coded disposal methods including approved service, consumption by humans or animals, ect."
+                },
+                "disposalOperator": {
+                    "type": "string",
+                    "description": "Disposal operator official name"
+                },
+                "disposalReference": {
+                    "type": "string",
+                    "description": "Reference (receipt, docket, or ID) for disposal"
+                }
+            }
+        }
+    ]
+}
