@@ -187,59 +187,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /farm/{id}/animals:
-    parameters:
-      - name: id
-        in: path
-        description: primary identifier for the farm
-        required: true
-        schema:
-          type: string
-    get:
-      description: Returns the list of animals for the farm
-      operationId: findAnimals
-      responses:
-        '200':
-          description: animal response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-    post:
-      description: Creates new animals for the farm
-      operationId: addAnimals
-      requestBody:
-        description: Animals to add to the farm
-        required: true
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
-      responses:
-        '200':
-          description: animals response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Identity_And_Life_Data/iscAnimalCore.json'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Error:
