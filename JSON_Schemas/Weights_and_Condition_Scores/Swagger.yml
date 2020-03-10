@@ -20,7 +20,9 @@ paths:
           content:
             application/json:
               schema:
-                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
+                  type: array
+                  items:
+                    $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
         default:
           description: unexpected error
           content:
@@ -43,14 +45,18 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
+              type: array
+              items:
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
       responses:
         '200':
           description: animal response
           content:
             application/json:
               schema:
-                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
+                type: array
+                items:
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
         default:
           description: unexpected error
           content:
@@ -73,14 +79,18 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
+              type: array
+              items:
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
       responses:
         '200':
           description: animal response
           content:
             application/json:
               schema:
-                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
+                type: array
+                items:
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
         default:
           description: unexpected error
           content:
@@ -104,6 +114,8 @@ paths:
           content:
             application/json:
               schema:
+                type: array
+                items:
                   $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
         default:
           description: unexpected error
@@ -157,14 +169,18 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
+              type: array
+              items:
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
       responses:
         '200':
           description: animal response
           content:
             application/json:
               schema:
-                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
+                type: array
+                items:
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
         default:
           description: unexpected error
           content:
