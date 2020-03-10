@@ -1,6 +1,6 @@
 openapi: "3.0.0"
 info:
-  title: MLA Weights and Condition Scores Example
+  title: MLA Animal Health and Treatments example
   version: 0.0.1
 paths:
   /animal/{identifier}/scores:
