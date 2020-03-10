@@ -87,19 +87,84 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-    delete:
-      description: deletes a single animal based on the ID supplied
-      operationId: deleteAnimal
+  /animal/{identifier}/weights:
+    get:
+      description: Returns the weights for the specified animal
+      operationId: findWeights
       parameters:
         - name: identifier
           in: path
-          description: primary identifier for the animal to delete
+          description: primary identifier for the animal
           required: true
           schema:
             type: string
       responses:
-        '204':
-          description: animal deleted
+        '200':
+          description: weights response
+          content:
+            application/json:
+              schema:
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      description: Uploads new weight for the animal
+      operationId: addWeight
+      parameters:
+        - name: identifier
+          in: path
+          description: primary identifier for the animal
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: new weight event for the animal
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
+      responses:
+        '200':
+          description: weight response
+          content:
+            application/json:
+              schema:
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      description: Updates the weight events for the specified animal
+      operationId: updateWeights
+      parameters:
+        - name: identifier
+          in: path
+          description: primary identifier for the animal
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Updated weight events for the animal
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
+      responses:
+        '200':
+          description: animal response
+          content:
+            application/json:
+              schema:
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscWeightEventResource'
         default:
           description: unexpected error
           content:
