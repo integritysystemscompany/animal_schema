@@ -3,10 +3,10 @@ info:
   title: MLA Animal Health and Treatments example
   version: 0.0.1
 paths:
-  /animal/{identifier}/scores:
+  /animal/{identifier}/treatments:
     get:
-      description: Returns the scores for the specified animal
-      operationId: findScores
+      description: Returns the treatments for the specified animal
+      operationId: findTreatments
       parameters:
         - name: identifier
           in: path
@@ -16,11 +16,13 @@ paths:
             type: string
       responses:
         '200':
-          description: scores response
+          description: Treatments response
           content:
             application/json:
               schema:
-                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
+                type: array
+                items:
+                  $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Animal_Health_and_Treatments/iscTreatmentEvent'
         default:
           description: unexpected error
           content:
@@ -28,8 +30,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     post:
-      description: Uploads new scores for the animal
-      operationId: addScores
+      description: Uploads new treatment event for the animal
+      operationId: addTreatment
       parameters:
         - name: identifier
           in: path
@@ -38,19 +40,19 @@ paths:
           schema:
             type: string
       requestBody:
-        description: new score events for the animal
+        description: new treatment event for the animal
         required: true
         content:
           application/json:
             schema:
-              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
+              $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Animal_Health_and_Treatments/iscTreatmentEvent'
       responses:
         '200':
           description: animal response
           content:
             application/json:
               schema:
-                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Weights_and_Condition_Scores/iscScoreReference'
+                $ref: 'https://github.com/AndyDe-Aldent/animal_schema/blob/feature/LifeDataSwaggerSpec/JSON_Schemas/Animal_Health_and_Treatments/iscTreatmentEvent'
         default:
           description: unexpected error
           content:
@@ -58,8 +60,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     put:
-      description: Updates the score events for the specified animal
-      operationId: updateScores
+      description: Updates the treatment event for the specified animal
+      operationId: updateTreatment
       parameters:
         - name: identifier
           in: path
@@ -68,7 +70,7 @@ paths:
           schema:
             type: string
       requestBody:
-        description: Updated score events for the animal
+        description: Updated treatment event for the animal
         required: true
         content:
           application/json:
