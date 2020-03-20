@@ -14,9 +14,10 @@
             "type": "string",
             "description": "Description for the diagnosis"
         },
-        "veNomCode": {
-            "type": "string",
-            "description": "VeNom diagnosis code.   refer to http://www.venomcoding.org/"
+        "diagnosisCode": {
+            "type": "object",
+            "$ref": "iscDiagnosisIdenifiterType.Json",
+            "description": "Descibes the scheme (eg venom or ICAR) and the code"
         },
         "site": {
             "type": "string",
