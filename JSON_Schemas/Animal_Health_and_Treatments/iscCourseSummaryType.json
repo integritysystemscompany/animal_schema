@@ -15,7 +15,7 @@
         "medicine": {
             "type": "object",
             "$ref": "iscMedicineResource.json",
-            "description": "This can be used when a medicine has been daministered without a treatment"
+            "description": "This can be used when a medicine has been administered without a treatment"
         },
         "procedure": {
             "type": "string",
