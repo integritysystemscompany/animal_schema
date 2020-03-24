@@ -1,0 +1,29 @@
+{
+    "required": [
+    ],
+
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "iscScoreEventCore.json"
+        },
+        {
+            "properties": {
+                "conditionScoreReference": {
+                    "type": "object",
+                    "$ref": "iscScoreReference.json",
+                    "description": "The scheme or scoring reference guideline being used"
+                },
+                "score":{
+                    "type": "number",
+                    "description": "Value of the condition score. Body condition scoring is a visual assessment of the amount of fat and muscle covering the bones of a cow, regardless of body size"
+                },
+                "traitLabel": {
+                    "type": "object",
+                    "$ref": "icarIdentifierType.json",
+                    "description": "Identifies the intended formal trait using scheme and ID. For instance: nz.sheep.traits, LW8"
+                }
+            }
+        }
+    ]
+}

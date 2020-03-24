@@ -1,0 +1,16 @@
+{
+    "required": [],
+    "type": "object",
+    "properties": {
+        "doseQuantity": {
+            "type": "number",
+            "format": "double",
+            "description": "Quantity of dose administered"
+        },
+        "doseUnits": {
+            "type": "object",
+            "$ref": "uncefactMassUnits.json",
+            "description": "Units of measurement in which the dose was measured and administeres as specified in UN/CEFACT 3-letter form"
+        }
+    }
+}

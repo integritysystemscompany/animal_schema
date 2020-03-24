@@ -1,0 +1,28 @@
+{
+    "required": [
+    ],
+
+    "type": "object",
+    "properties": {
+        "scheme": {
+            "type": "string",
+            "description": "The scheme or scoring reference guideline being used"
+        },
+        "version": {
+            "type": "string",
+            "description": "Version reference of the particular scheme being followed for scoring"
+        },
+        "referenceURL": {
+            "type": "string",
+            "description": "Ready links to documentation about the scoring scheme or reference being used"
+        },
+        "species": {
+            "type": "string",
+            "description": "Species for which the scoring scheme applies to"
+        },
+        "country": {
+            "type": "string",
+            "description": "Country to which the scoring scheme applies to"
+        }
+    }
+}

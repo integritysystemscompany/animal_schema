@@ -1,0 +1,19 @@
+{
+    "required": [
+    ],
+
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "properties": {
+                "assessor": {
+                    "type": "string",
+                    "description": "Name of the assessor"
+                }
+            }
+        }
+    ]
+}
