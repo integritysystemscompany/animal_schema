@@ -16,7 +16,7 @@
                 },
                 "score":{
                     "type": "number",
-                    "description": "Value of the condition score"
+                    "description": "Value of the condition score. Body condition scoring is a visual assessment of the amount of fat and muscle covering the bones of a cow, regardless of body size"
                 },
                 "traitLabel": {
                     "type": "object",
