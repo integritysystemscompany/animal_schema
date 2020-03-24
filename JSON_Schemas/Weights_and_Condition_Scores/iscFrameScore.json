@@ -16,7 +16,7 @@
                 },
                 "score":{
                     "type": "number",
-                    "description": "Value of the frame score"
+                    "description": "Value of the frame score. Frame score is a convenient way to discuss and evaluate height is in units of 'frame score' based on the height over the hips at a given age"
                 },
                 "traitLabel": {
                     "type": "object",
