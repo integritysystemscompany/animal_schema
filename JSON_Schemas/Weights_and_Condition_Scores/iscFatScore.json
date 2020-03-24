@@ -18,23 +18,6 @@
                     "type": "number",
                     "description": "Value of the fat score"
                 },
-                "fatDepths": {
-                    "type": "array",
-                    "objects": {
-                        "type": "object",
-                        "properties": {
-                            "bodySite": {
-                                "type": "string",
-                                "description": "Body Site where the measurement was taken"
-                            },
-                            "fatDepth": {
-                                "type": "number",
-                                "format": "double",
-                                "description": "Usually measure in Millimeters"
-                            }
-                        }
-                    }
-                },
                 "traitLabel": {
                     "type": "object",
                     "$ref": "icarIdentifierType.json",
