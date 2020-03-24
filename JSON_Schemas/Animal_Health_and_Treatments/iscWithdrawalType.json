@@ -14,7 +14,7 @@
         },
         "market" : {
             "type": "string,
-            "description": "Indicated the market the withdrawal applies to"
+            "description": "Indicates the market the withdrawal applies to"
         }
     }
 }
