@@ -13,7 +13,7 @@
             "description": "Date till when the withholding applies"
         },
         "market" : {
-            "type": "string,
+            "type": "string",
             "description": "Indicates the market the withdrawal applies to"
         }
     }
