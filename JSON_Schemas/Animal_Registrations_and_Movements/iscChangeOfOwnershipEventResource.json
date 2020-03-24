@@ -1,0 +1,27 @@
+{
+    "required": [],
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "properties": {
+                "eventMode": {
+                    "type": "string",
+                    "description": "Type of sale or purchase event"
+                },
+                "lot": {
+                    "type": "object",
+                    "$ref": "iscLotDetailType.json",
+                    "description": "Describes the lot details"
+                },
+                "transactionCost": {
+                    "type": "object",
+                    "$ref": "iscTransactionCostType.json",
+                    "description": "provides the..."
+                }
+            }
+        }
+    ]
+}

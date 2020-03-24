@@ -1,0 +1,21 @@
+{
+    "properties": {
+        "currency": {
+            "type": "string",
+            "description": "UNCEFACT Code for the currency used in the transaction"
+        },
+        "totalCost": {
+            "type": "number",
+            "format": "double",
+            "description": "Total cost of the transaction"
+        },
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "$ref": "iscTransactionItemType.json"
+            },
+            "description": "describes the items in the transaction"
+        }
+    }
+}
