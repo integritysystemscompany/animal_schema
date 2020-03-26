@@ -1,0 +1,18 @@
+{
+    "description": "Defines a generalised measurement object with value and resolution. Override to provide specific units.",
+
+    "type": "object",
+    
+    "properties": {
+        "resolution":{
+            "type": "number",
+            "format": "double",
+            "description": "The smallest measurement difference that can be discriminated given the current device settings. Specified in Units, for instance 0.5 (kilograms)."
+        },
+        "value": {
+            "type": "number",
+            "format": "double",
+            "description": "The weight observation, in the units specified (usually kilograms)"
+        }
+    }
+}
