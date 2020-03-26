@@ -21,7 +21,8 @@
             "description": "the job or position the person holds"
         },
         "licenceCredential": {
-            "type": "string",
+            "type": "object",
+            "$ref": "iscLicenceCredentialType.json",
             "description": "Licence Id of the person pertaining to the prefessional body he/she belongs to"
         }
     }
