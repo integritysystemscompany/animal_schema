@@ -11,6 +11,10 @@
             "type":"string",
             "format": "dateTime",
             "description": "Date till when the withholding applies"
+        },
+        "market" : {
+            "type": "string",
+            "description": "Indicates the market the withdrawal applies to"
         }
     }
 }
