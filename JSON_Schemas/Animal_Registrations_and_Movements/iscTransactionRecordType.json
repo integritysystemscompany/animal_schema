@@ -1,0 +1,22 @@
+{
+    "description": "Records details of a government or other official transaction.",
+
+    "properties": {
+        "serviceURI": {
+            "type": "string",
+            "description": "The URI or other unique identifier of the government/official service."
+        },
+        "transactionID": {
+            "type": "string",
+            "description": "An identifier for the transaction returned from the service."
+        },
+        "movementID": {
+            "type": "string",
+            "description": "An identifier for the movement (if distinct from transaction) returned from the service."
+        },
+        "status": {
+            "type": "string",
+            "description": "A status returned by the government or official service for the transaction (often success/fail)."
+        }
+    }
+}
