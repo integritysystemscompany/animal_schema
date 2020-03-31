@@ -1,0 +1,22 @@
+{
+    "required": [],
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "properties": {
+                "registrationReason": {
+                    "type": "string",
+                    "enum": ["Born", "Registered"],
+                    "description": "Enumeration for registration reason: Born, or Registered (induct existing animal)."
+                },
+                "animalDetail": {
+                    "type": "object",
+                    "$ref": "icarAnimalCoreResource.json"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "required": ["departureKind", "departureReason"],
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "properties": {
+                "departureKind":{
+                    "type": "object",
+                    "$ref": "icarDepartureKindType.json",
+                    "description": "Enumeration for the kind of departure"
+                },
+                "departureReason": {
+                    "type": "object",
+                    "$ref": "icarDepartureReasonType",
+                    "description": "Enumeration for departure cause"
+                },
+                "consignment": {
+                    "type": "object",
+                    "$ref": "icarCOnsignmentType.json"
+                }
+            }
+        }
+    ]
+}

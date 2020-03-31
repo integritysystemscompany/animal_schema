@@ -1,0 +1,37 @@
+{
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Identifier for the organisation"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the organisation"
+        },
+        "globalLocationNumber": {
+            "type": "string",
+            "description": "The Global Location Number of the respective organization, person, or place"
+        },
+        "address": {
+            "type": "string",
+            "description": "address of the organisation"
+        },
+        "location": {
+            "type": "object",
+            "$ref": "icarLocationIdentifierType.json",
+            "description": "location details for the organisation"
+        },
+        "vatID": {
+            "type": "string",
+            "description": "The value added tax ID of the organisation"
+        },
+        "telephone": {
+            "type": "string",
+            "description": "Contact Telephone for the organisation"
+        },
+        "email": {
+            "type": "string",
+            "description": "Email contact for the organisation"
+        }
+    }
+}

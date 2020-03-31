@@ -25,9 +25,19 @@
             "$ref": "icarAnimalIdentifierType.json",
             "description": "Unique animal scheme and identifier combination."
           },
-          "officialName": {
+        "officialName": {
             "type": "string",
             "description": "Official herdbook name." 
-          }
+        },
+        "parentageAssessedMethod": {
+            "type": "string",
+            "enum": ["Observed", "Associated", "Derived", "DNA"],
+            "description": "Observed (e.g. Dam observed giving birth to progeny), Associated (e.g. Dam seen feeding progeny), Derived (e.g. Sire derived from mating records), DNA (the result of a DNA parentage test)"
+        },
+        "DNAProbability": {
+            "type": "number",
+            "format": "double",
+            "description": "The calculated likelihood or degree of probability resulting from DNA test analysis expressed in %"
+        }
     }
 }

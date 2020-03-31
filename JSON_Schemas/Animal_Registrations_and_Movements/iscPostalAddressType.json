@@ -1,0 +1,28 @@
+{
+    "properties": {
+        "streetAddress": {
+            "type": "string",
+            "description": "The street address"
+        },
+        "postalCode": {
+            "type": "string",
+            "description": "The postal code"
+        },
+        "locality": {
+            "type": "string",
+            "description": "the locality in which the street address is, and which is in the region"
+        },
+        "region": {
+            "type": "string",
+            "description": "the region in which the locality is, and which is in the country"
+        },
+        "country": {
+            "type": "string",
+            "description": "the country"
+        },
+        "postOfficeBoxNumber": {
+            "type": "string",
+            "description": "The post office box number of PO box addresses"
+        }
+    }
+}
