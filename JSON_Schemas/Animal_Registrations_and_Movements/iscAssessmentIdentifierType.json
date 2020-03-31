@@ -1,0 +1,8 @@
+{
+    "description": "Identifies an Assessment using a combination of scheme (e.g. cattle.mla.com.au) and ID within that scheme.",
+    "type": "object",
+    "allOf": [{
+        "$ref": "icarIdentifierType.json"
+      }
+    ]
+}
