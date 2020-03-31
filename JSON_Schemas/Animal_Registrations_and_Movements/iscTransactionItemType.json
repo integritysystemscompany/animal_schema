@@ -10,7 +10,7 @@
             "description": "number of kilograms or head or whatever the basis is"
         },
         "units": {
-            "$ref": "../Weights_and_Condition_Scores/iscMassMeasurementType.json",
+            "$ref": "uncefactMassUnitsType",
             "description": "The units to be used for the quantity field."
         },
         "value": {
