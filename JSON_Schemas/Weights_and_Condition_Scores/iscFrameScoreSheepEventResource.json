@@ -1,0 +1,19 @@
+{
+    "description": "Frame score (size class) for a sheep using the MLA frame size categories.",
+
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "score":{
+                    "type": "string",
+                    "enum": ["A", "B", "C", "D", "E"],
+                    "description": "Value of the frame score from large (A) to small (E)."
+                }
+            }
+        }
+    ]
+}
