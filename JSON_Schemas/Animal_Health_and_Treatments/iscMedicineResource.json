@@ -1,8 +1,8 @@
 {
-    "description": "Derived from icarResourceReferenceType, this links to a medicine and provides basic details.",
+    "description": "Defines a medicine (and eventually withdrawal and application information).",
     "allOf": [
         {
-            "$ref": "icarResourceReferenceType.json"
+            "$ref": "icarResource.json"
         },
         {
             "type": "object",
@@ -16,7 +16,8 @@
                     "description": "An indicator whether the medicine or remedy is an approved medicine"
                 },
                 "registeredID": {
-                    "$ref": "iscMedicineRegistrationIdentifierType.json"
+                    "$ref": "iscMedicineRegistrationIdentifierType.json",
+                    "description": "Registered ID in the scheme and ID format."
                 }
             }
         }
