@@ -24,7 +24,7 @@
           "Animal"
         ],
         "parameters": [{
-            "$ref": "#/components/parameters/location-scheme"
+            "$ref": "#/components/parameters/Animal-id"
           }
         ],
         "responses": {
@@ -662,54 +662,6 @@
       },
       "iscAnimalCore": {
         "$ref": "../resources/iscAnimalCore.json"
-      },
-      "icarReproMatingRecommendationCollection": {
-        "$ref": "../collections/icarReproMatingRecommendationCollection.json"
-      },
-      "icarTestDayResultEventCollection": {
-        "$ref": "../collections/icarTestDayResultEventCollection.json"
-      },
-      "icarLactationCollection": {
-        "$ref": "../collections/icarLactationCollection.json"
-      },
-      "icarMovementBirthEventCollection": {
-        "$ref": "../collections/icarMovementBirthEventCollection.json"
-      },
-      "icarMovementDeathEventCollection": {
-        "$ref": "../collections/icarMovementDeathEventCollection.json"
-      },
-      "icarMovementArrivalEventCollection": {
-        "$ref": "../collections/icarMovementArrivalEventCollection.json"
-      },
-      "icarMovementDepartureEventCollection": {
-        "$ref": "../collections/icarMovementDepartureEventCollection.json"
-      },
-      "icarAnimalCoreCollection": {
-        "$ref": "../collections/icarAnimalCoreCollection.json"
-      },
-      "icarReproPregnancyCheckEventCollection": {
-        "$ref": "../collections/icarReproPregnancyCheckEventCollection.json"
-      },
-      "icarReproHeatEventCollection": {
-        "$ref": "../collections/icarReproHeatEventCollection.json"
-      },
-      "icarReproInseminationEventCollection": {
-        "$ref": "../collections/icarReproInseminationEventCollection.json"
-      },
-      "icarMilkingDryOffEventCollection": {
-        "$ref": "../collections/icarMilkingDryOffEventCollection.json"
-      },
-      "icarReproAbortionEventCollection": {
-        "$ref": "../collections/icarReproAbortionEventCollection.json"
-      },
-      "icarReproParturitionEventCollection": {
-        "$ref": "../collections/icarReproParturitionEventCollection.json"
-      },
-      "icarWeightEventCollection": {
-        "$ref": "../collections/icarWeightEventCollection.json"
-      },
-      "icarDeviceCollection": {
-        "$ref": "../collections/icarDeviceCollection.json"
       }
     },
     "parameters": {
@@ -731,6 +683,15 @@
         "name": "location-id",
         "in": "path",
         "description": "The unique identifier for the location.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "animal-id": {
+        "name": "animal-id",
+        "in": "path",
+        "description": "The unique identifier for the animal.",
         "required": true,
         "schema": {
           "type": "string"
