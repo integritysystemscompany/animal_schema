@@ -4,7 +4,7 @@
     "properties": {
         "productType": {
             "type": "string",
-            "enum": ["Milk","Meat","Eggs","Honey","Velvet"],
+            "enum": ["Milk","Meat","Eggs","Honey","Velvet","Fibre"],
             "description": "Type of withholding that applies to the specific food chain as a result of the treatment administered"
         },
         "endDate": {
@@ -14,7 +14,7 @@
         },
         "market" : {
             "type": "string",
-            "description": "Indicates the market the withdrawal applies to"
+            "description": "Indicates the market the withdrawal applies to, using a scheme id such as au.gov.apvma.esi or au.gov.apvma.whp"
         }
     }
 }
