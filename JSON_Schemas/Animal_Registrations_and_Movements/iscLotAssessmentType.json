@@ -1,5 +1,22 @@
 {
     "properties": {
-        
+        "assessmentType": {
+            "type": "object",
+            "$ref": "iscAssessmentIdentifierType.json",
+            "description": "Identifies the assessment used (official scheme and ID)."
+        },
+        "assessmentValue": {
+            "type":"string",
+            "description": "The measured or recorded assessment value."
+        },
+        "responsible": {
+            "type": "object",
+            "$ref": "iscPersonType.json",
+            "description": "The person responsible for the assessment."
+        },
+        "dateAssessed": {
+            "$ref": "icarDateTimeType.json",
+            "description": "ISO8601 Date Time of assessment."
+        }
     }
 }

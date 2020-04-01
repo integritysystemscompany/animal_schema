@@ -1,0 +1,19 @@
+{
+    "description": "Muscle score observation for an animal using the MLA muscle score scheme.",
+
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "score":{
+                    "type": "string",
+                    "enum": ["A", "B", "C", "D", "E"],
+                    "description": "Value of the muscle score. Muscle score measures the degree of muscularity of an animal and describes the shape of cattle independent of the influence of fatness."
+                }
+            }
+        }
+    ]
+}

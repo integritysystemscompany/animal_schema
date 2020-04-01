@@ -9,6 +9,10 @@
             "format": "double",
             "description": "number of kilograms or head or whatever the basis is"
         },
+        "units": {
+            "$ref": "uncefactMassUnitsType",
+            "description": "The units to be used for the quantity field."
+        },
         "value": {
             "type": "number",
             "format": "double",

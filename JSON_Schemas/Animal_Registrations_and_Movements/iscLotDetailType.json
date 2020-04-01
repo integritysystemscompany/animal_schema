@@ -2,19 +2,12 @@
     "properties": {
         "eventName": {
             "type": "string",
-            "description": "Name of the sale or purchase event"
+            "description": "Name of the trading (sale or purchase) event."
         },
         "eventReference": {
             "type": "object",
-            "properties":{ 
-                "id": {
-                    "type": "string"
-                },
-                "scheme": {
-                    "type": "string"
-                }
-            },
-            "description": "Event Reference or Identification"
+            "$ref": "iscTradingEventIdentifierType.json",
+            "description": "Event reference using the scheme and ID method (e.g. auctionsplus.com.au, #15263)."
         },
         "vendor": {
             "type": "object",
@@ -23,10 +16,10 @@
         },
         "purchaser": {
             "type" : "object",
-            "$ref": "iscOrganistionType.json",
+            "$ref": "iscOrganisationType.json",
             "description": "Details of the buyer purchasing the stock"
         },
-        "id": {
+        "lotId": {
             "type": "string",
             "description": "Lot Identification number in the sale"
         },
@@ -55,13 +48,14 @@
             "description": "Agent details for the lot"
         },
         "assessments": {
-            "type": "object",
-            "$ref": "iscLotAssessmentType.json",
-            "description": "Stock assessment details"
+            "type": "array",
+            "items": {
+                "$ref": "iscLotAssessmentType.json"
+            },
+            "description": "A set of assessments for the animal(s) in the lot."
         },
         "sellingBasis": {
-            "type": "string",
-            "enum": ["$/head, c/kg Live, c/kg dressed"],
+            "$ref": "iscSellingBasisType.json",
             "description": "Basis on which the stock was sold"
         }
     }
