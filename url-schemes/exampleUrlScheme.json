@@ -665,6 +665,15 @@
       },
       "iscScoreReference": {
         "$ref": "../resources/iscScoreEventCoreResource.json"
+      },
+      "iscTreatmentEvent": {
+        "$ref": "../resources/iscTreatmentEvent.json"
+      },
+      "iscDiagnosisEvent": {
+        "$ref": "../resources/iscDiagnosisEventResource.json"
+      },
+      "iscMovementArrivalEvent": {
+        "$ref": "../resources/iscMovementArrivalEventResource.json"
       }
     },
     "parameters": {
