@@ -16,7 +16,7 @@
     }
   ],
   "paths": {
-    "/animal/{identifier}:": {
+    "/animal/{animal-id}:": {
       "get": {
         "operationId": "get-animal",
         "summary": "Returns the details for the specified animal",
@@ -41,7 +41,7 @@
         }
       }
     },
-    "/locations/{locationid}/animals": {
+    "/locations/{location-id}/animals": {
       "get": {
         "operationId": "get-location-animals",
         "summary": "Gets a list of animals for the location",
@@ -662,6 +662,9 @@
       },
       "iscAnimalCore": {
         "$ref": "../resources/iscAnimalCore.json"
+      },
+      "iscScoreReference": {
+        "$ref": "../resources/iscScoreEventCoreResource.json"
       }
     },
     "parameters": {
