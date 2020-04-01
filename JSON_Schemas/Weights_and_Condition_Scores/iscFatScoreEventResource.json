@@ -1,0 +1,19 @@
+{
+    "description": "Fat score observation for an animal using the AUS-MEAT live animal fat score scheme.",
+
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+
+                "score": {
+                    "type": "number",
+                    "description": "Value of the fat score (1-5 for sheep, 1-6 for cattle)."
+                }
+            }
+        }
+    ]
+}

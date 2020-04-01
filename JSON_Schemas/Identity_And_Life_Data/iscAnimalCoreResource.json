@@ -49,6 +49,18 @@
                         "R",
                         "NULL"
                     ]
+                },
+                "breedSocRegDate": {
+                    "$ref": "icarDateTimeType.json",
+                    "description": "Date and time of breed society registration status change."
+                },
+                "statusChangeDate": {
+                    "$ref": "icarDateTimeType.json",
+                    "description": "Date and time animal status last changed."
+                },
+                "desexedDate": {
+                    "$ref": "icarDateTimeType.json",
+                    "description":"Date and time animal was desexed (change to gender value)."
                 }
             }
         }

@@ -34,7 +34,7 @@
                             "type": "array",
                             "items": {
                                 "type": "object",
-                                "$ref": "iscTreatmentEvent.json"
+                                "$ref": "iscTreatmentEventResource.json"
                             },
                             "description": "List of dated treatments"
                         }

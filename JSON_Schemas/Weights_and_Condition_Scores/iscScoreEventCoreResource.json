@@ -1,0 +1,20 @@
+{
+    "description": "Base class for score observations. Use Responsible to record the assessor, scoreReference to define type of score.",
+
+    
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "scoreReference": {
+                    "type": "object",
+                    "$ref": "iscScoreReferenceType.json",
+                    "description": "The scheme or scoring reference guideline being used."
+                }
+            }
+        }
+    ]
+}

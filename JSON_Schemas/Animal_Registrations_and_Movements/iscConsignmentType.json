@@ -65,6 +65,15 @@
                     "type" : "object",
                     "$ref": "iscPersonType.json",
                     "description": "Person or driver who is transporting the stock"
+                },
+                "documentURI": {
+                    "type": "string",
+                    "description": "An optional URL to a document for this consignment (for instance, a PDF or image)."
+                },
+                "transactionRecord": {
+                    "type": "object",
+                    "$ref": "iscTransactionRecordType.json",
+                    "description": "Transaction record from a government or other official service."
                 }
             }
         }
