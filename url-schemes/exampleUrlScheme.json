@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Release Candidate Messages",
-    "description": "The specifications of messages which are ready for ICAR approval and release",
+    "title": "ISC Example Swagger Specs",
+    "description": "Example specification of how a API might look using the ISC schemas",
     "version": "1.0",
     "contact": {
       "name": "Animal Data Exchange Working Group",
@@ -10,28 +10,9 @@
       "email": "icar@icar.org"
     }
   },
-  "servers": [{
-    "url": "https://icar-ade.standard.com"
-  }],
   "tags": [{
       "name": "additions",
       "description": "new endpoints not yet approved"
-    },
-    {
-      "name": "ADE-1-milk",
-      "description": "Milk messages approved by the working group, waiting for a test"
-    },
-    {
-      "name": "ADE-1-other",
-      "description": "Other messages approved by the working group, waiting for a test"
-    },
-    {
-      "name": "ADE-1-registration",
-      "description": "Registration messages approved by the working group, waiting for a test"
-    },
-    {
-      "name": "ADE-1-reproduction",
-      "description": "Reproduction messages approved by the working group, waiting for a test"
     }
   ],
   "paths": {
