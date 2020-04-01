@@ -16,25 +16,16 @@
     }
   ],
   "paths": {
-    "/locations/{location-scheme}/{location-id}/milking-visits": {
+    "/animal/{identifier}:": {
       "get": {
-        "operationId": "get-milking-visits",
-        "summary": "Get the data for milking visits",
+        "operationId": "get-animal",
+        "summary": "Returns the details for the specified animal",
         "description": "# Purpose\nProvides data from visits of animals to a milking parlour.\n \nThis comprises all possible data. Anybody can choose to define API's that return less information in the response.\n",
         "tags": [
-          "ADE-1-milk"
+          "Animal"
         ],
         "parameters": [{
             "$ref": "#/components/parameters/location-scheme"
-          },
-          {
-            "$ref": "#/components/parameters/location-id"
-          },
-          {
-            "$ref": "#/components/parameters/start-date-time"
-          },
-          {
-            "$ref": "#/components/parameters/end-date-time"
           }
         ],
         "responses": {
@@ -43,18 +34,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/icarMilkingVisitEventCollection"
-                },
-                "examples": {
-                  "base": {
-                    "$ref": "#/components/examples/milking-visit"
-                  }
+                  "$ref": "#/resources/iscAnimalCore"
                 }
               }
             }
-          },
-          "default": {
-            "$ref": "#/components/responses/default"
           }
         }
       }
