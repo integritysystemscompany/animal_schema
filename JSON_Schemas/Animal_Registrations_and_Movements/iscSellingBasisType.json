@@ -1,0 +1,13 @@
+{
+    "description": "Selling basis for livestock.",
+  
+    "type": "string",
+  
+    "enum": [
+        "Head",
+        "Liveweight",
+        "CarcaseWeight",
+        "DressedWeight",
+        "Other"
+    ]
+  }

@@ -9,7 +9,7 @@
             "properties": {
                 "registrationReason": {
                     "type": "string",
-                    "enum": ["Born", "Registered"],
+                    "enum": ["Born", "Found", "Registered"],
                     "description": "Enumeration for registration reason: Born, or Registered (induct existing animal)."
                 },
                 "animalDetail": {

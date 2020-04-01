@@ -18,8 +18,8 @@
                 },
                 "disposalMethod": {
                     "type": "string",
-                    "enum": ["Approved Service", "Consumption", "On-premise", "Other"],
-                    "description": "Coded disposal methods including approved service, consumption by humans or animals, ect."
+                    "enum": ["ApprovedService", "ConsumptionOnFarm", "ConsumptionOffFarm", "OnPremise", "Other"],
+                    "description": "Coded disposal methods including approved service, consumption by humans or animals, etc."
                 },
                 "disposalOperator": {
                     "type": "string",
