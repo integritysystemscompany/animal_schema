@@ -20,7 +20,6 @@
       "get": {
         "operationId": "get-animal",
         "summary": "Returns the details for the specified animal",
-        "description": "# Purpose\nProvides data from visits of animals to a milking parlour.\n \nThis comprises all possible data. Anybody can choose to define API's that return less information in the response.\n",
         "tags": [
           "Animal"
         ],
@@ -30,11 +29,11 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful. The response contains the milking results for the given location",
+            "description": "Successful. The response contains the animal life data",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/resources/iscAnimalCore"
+                  "$ref": "#/components/schemas/iscAnimalCore"
                 }
               }
             }
@@ -42,38 +41,27 @@
         }
       }
     },
-    "/locations/{location-scheme}/{location-id}/test-day-results": {
+    "/locations/{locationid}/animals": {
       "get": {
-        "operationId": "get-test-day-results",
-        "summary": "Get the data for test day results",
-        "description": "# Purpose\nProvides data from the test day for animals on a farm\n",
+        "operationId": "get-location-animals",
+        "summary": "Gets a list of animals for the location",
         "tags": [
-          "ADE-1-milk"
+          "Animal"
         ],
-        "parameters": [{
-            "$ref": "#/components/parameters/location-scheme"
-          },
+        "parameters": [
           {
             "$ref": "#/components/parameters/location-id"
-          },
-          {
-            "$ref": "#/components/parameters/start-date-time"
-          },
-          {
-            "$ref": "#/components/parameters/end-date-time"
           }
         ],
         "responses": {
           "200": {
-            "description": "Successful. The response contains the test day results for the given location",
+            "description": "Successful. The responce contains a list of animals",
             "content": {
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/icarTestDayResultEventCollection"
-                },
-                "examples": {
-                  "base": {
-                    "$ref": "#/components/examples/test-day-result"
+                "type": "array",
+                "items":{
+                  "schema": {
+                    "$ref": "#/components/schemas/iscAnimalCore"
                   }
                 }
               }
@@ -672,8 +660,8 @@
       "error": {
         "$ref": "../resources/exampleErrorResource.json"
       },
-      "icarMilkingVisitEventCollection": {
-        "$ref": "../collections/icarMilkingVisitEventCollection.json"
+      "iscAnimalCore": {
+        "$ref": "../resources/iscAnimalCore.json"
       },
       "icarReproMatingRecommendationCollection": {
         "$ref": "../collections/icarReproMatingRecommendationCollection.json"
