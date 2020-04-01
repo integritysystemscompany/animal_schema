@@ -14,7 +14,7 @@
         },
         "medicine": {
             "type": "object",
-            "$ref": "iscMedicineResource.json",
+            "$ref": "iscMedicineReferenceType.json",
             "description": "Medicine details used in the course"
         },
         "procedure": {

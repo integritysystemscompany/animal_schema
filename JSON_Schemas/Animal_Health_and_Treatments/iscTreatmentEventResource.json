@@ -9,8 +9,8 @@
             "properties": {
                 "medicine": {
                     "type": "object",
-                    "$ref": "iscMedicineResource.json",
-                    "description": "the Medicine used in this treatment if applicable"
+                    "$ref": "iscMedicineReferenceType.json",
+                    "description": "The medicine used in this treatment if applicable"
                 },
                 "procedure": {
                     "type": "string",
