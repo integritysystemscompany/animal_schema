@@ -24,7 +24,7 @@
           "Animal"
         ],
         "parameters": [{
-            "$ref": "#/components/parameters/Animal-id"
+            "$ref": "#/components/parameters/animal-id"
           }
         ],
         "responses": {
