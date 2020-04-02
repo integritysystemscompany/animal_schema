@@ -55,7 +55,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful. The responce contains a list of animals",
+            "description": "Successful. The response contains a list of animals",
             "content": {
               "application/json": {
                 "type": "array",
@@ -149,7 +149,7 @@
     },
     "responses": {
       "default": {
-        "description": "An error has occured while handling the request. Check the content of the message for the error details.",
+        "description": "An error has occurred while handling the request. Check the content of the message for the error details.",
         "content": {
           "application/json": {
             "schema": {
