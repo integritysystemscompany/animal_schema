@@ -1,16 +1,14 @@
 {
-    "description": "A livestock weight observation.",
-
-    "required": [
-        "weight"
-    ],
-
-    "type": "object",
     "allOf": [
         {
             "$ref": "icarEventCoreResource.json"
         },
         {
+            "description": "A livestock weight observation.",
+            "required": [
+                "weight"
+            ],
+            "type": "object",
             "properties": {
                 "weight": {
                     "$ref": "iscMassMeasurementType.json",

@@ -1,12 +1,11 @@
 {
-    "description": "Fat score observation for an animal using the AUS-MEAT live animal fat score scheme.",
-
     "allOf": [
         {
             "$ref": "icarEventCoreResource.json"
         },
         {
             "type": "object",
+            "description": "Fat score observation for an animal using the AUS-MEAT live animal fat score scheme.",
             "properties": {
 
                 "score": {

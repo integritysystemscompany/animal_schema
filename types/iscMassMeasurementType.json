@@ -1,23 +1,20 @@
 {
-  "description": "Defines a general mass measurement (derived from iscMeasurementType).",
-
-    "required": [
-        "value",
-        "units"
-    ],
-
     "allOf": [
         {
             "$ref": "iscMeasurementType.json"
         },
         {
            "type": "object",
-
+           "description": "Defines a general mass measurement (derived from iscMeasurementType).",
+           "required": [
+               "value",
+               "units"
+           ],
             "properties": {
                 "units": {
                     "type": "object",
                     "$ref": "uncefactMassUnitsType.json",
-                    "description": "Units specified in UN/CEFACT 3-letter form. Default if not specified is KGM. Mass units for weight from UN/CEFACT trade facilitation recommendation 20.\r\n Kilogram, Gram, Pound, Metric Tonne, Microgram, Miligram."
+                    "description": "Units specified in UN/CEFACT 3-letter form. Default if not specified is KGM. Mass units for weight from UN/CEFACT trade facilitation recommendation 20.\r\n Kilogram, Gram, Pound, Metric Tonne, Microgram, Milligram."
                 }
             }
         }

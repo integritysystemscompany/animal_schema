@@ -1,11 +1,11 @@
 {
-    "required": [],
-    "type": "object",
     "allOf": [
         {
             "$ref": "icarConsignmentType.json"
         },
         {
+            "required": [],
+            "type": "object",
             "properties": {
                 "id": {
                     "type": "object",

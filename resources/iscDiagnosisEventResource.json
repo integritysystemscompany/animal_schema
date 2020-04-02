@@ -1,11 +1,11 @@
 {
-    "required": [],
-    "type": "object",
     "allOf": [
         {
             "$ref": "icarEventCoreResource.json"
         },
         {
+            "required": [],
+            "type": "object",
             "properties": {
                 "responsible": {
                     "type": "string",

@@ -1,13 +1,12 @@
 {
-    "required": [],
-    "type": "object",
-    "description": "Use this event to record new tags applied to an animal in place of a lost tag.",
-
     "allOf": [
         {
             "$ref": "icarEventCoreResource.json"
         },
         {
+            "required": [],
+            "type": "object",
+            "description": "Use this event to record new tags applied to an animal in place of a lost tag.",        
             "properties": {
                 "replacementTagType": {
                     "type": "string",

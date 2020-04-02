@@ -23,7 +23,7 @@
         "licenceCredential": {
             "type": "object",
             "$ref": "iscLicenceCredentialType.json",
-            "description": "Licence Id of the person pertaining to the prefessional body he/she belongs to"
+            "description": "Licence Id of the person pertaining to the professional body he/she belongs to"
         }
     }
 }

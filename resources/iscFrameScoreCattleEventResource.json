@@ -1,12 +1,11 @@
 {
-    "description": "Frame score of a cattle animal, using the Australian National Bovine Language",
-
     "allOf": [
         {
             "$ref": "iscScoreEventCoreResource.json"
         },
         {
             "type": "object",
+            "description": "Frame score of a cattle animal, using the Australian National Bovine Language",
             "properties": {
                 "score":{
                     "type": "number",

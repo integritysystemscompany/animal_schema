@@ -1,12 +1,11 @@
 {
-    "description": "A body condition score observation for an animal based on the species-specific scoring guide.",
-
     "allOf": [
         {
             "$ref": "iscEventCoreResource.json"
         },
         {
             "type": "object",
+            "description": "A body condition score observation for an animal based on the species-specific scoring guide.",
             "properties": {
                 "conditionScoreReference": {
                     "type": "object",
