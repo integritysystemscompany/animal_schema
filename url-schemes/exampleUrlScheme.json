@@ -61,7 +61,7 @@
                 "type": "array",
                 "items":{
                   "schema": {
-                    "$ref": "#/components/schemas/iscAnimalCore"
+                    "$ref": "#/components/schemas/iscAnimalCoreResource"
                   }
                 }
               }
