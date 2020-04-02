@@ -1,5 +1,5 @@
 {
-    "description": "Defines a trading event reference in terms of an event organiser (scheme) and event ID.",
+    "description": "Defines a trading event reference in terms of an event organizer (scheme) and event ID.",
 
     "allOf": [{
         "$ref": "icarIdentifierType.json"

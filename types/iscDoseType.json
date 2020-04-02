@@ -10,7 +10,7 @@
         "doseUnits": {
             "type": "object",
             "$ref": "uncefactMassUnits.json",
-            "description": "Units of measurement in which the dose was measured and administeres as specified in UN/CEFACT 3-letter form"
+            "description": "Units of measurement in which the dose was measured and administered as specified in UN/CEFACT 3-letter form"
         }
     }
 }

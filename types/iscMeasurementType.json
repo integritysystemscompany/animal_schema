@@ -1,5 +1,5 @@
 {
-    "description": "Defines a generalised measurement object with value and resolution. Override to provide specific units.",
+    "description": "Defines a generalized measurement object with value and resolution. Override to provide specific units.",
 
     "type": "object",
     

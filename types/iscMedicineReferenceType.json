@@ -1,11 +1,11 @@
 {
-    "description": "Derived from icarResourceReferenceType, this links to a medicine and provides basic details.",
-    "allOf": [
+       "allOf": [
         {
             "$ref": "icarResourceReferenceType.json"
         },
         {
             "type": "object",
+            "description": "Derived from icarResourceReferenceType, this links to a medicine and provides basic details.",
             "properties": {
                 "name": {
                     "type": "string",

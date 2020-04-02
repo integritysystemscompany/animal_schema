@@ -1,13 +1,12 @@
 {
-    "required": [
-    ],
-
-    "type": "object",
     "allOf": [
         {
             "$ref": "icarDeviceReferenceType.json"
         },
         {
+            "required": [
+            ],
+            "type": "object",
             "properties": {
               "icarResourceReferenceType":{
                 "type": "object",
@@ -21,7 +20,8 @@
                "serial": {
                 "type": "string",
                 "description": "Optionally, the serial number of the device."
+                }
             }
         }
-     ]
+    ]
 }
