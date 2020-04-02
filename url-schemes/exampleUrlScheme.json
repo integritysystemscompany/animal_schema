@@ -33,7 +33,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/iscAnimalCore"
+                  "$ref": "#/components/schemas/iscAnimalCoreResource"
                 }
               }
             }
@@ -76,7 +76,7 @@
   },
   "components": {
     "schemas": {
-      "iscAnimalCore": {
+      "iscAnimalCoreResource": {
         "$ref": "../resources/iscAnimalCoreResource.json"
       },
       "iscScoreReference": {
