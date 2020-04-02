@@ -76,9 +76,6 @@
   },
   "components": {
     "schemas": {
-      "error": {
-        "$ref": "../resources/exampleErrorResource.json"
-      },
       "iscAnimalCore": {
         "$ref": "../resources/iscAnimalCore.json"
       },
