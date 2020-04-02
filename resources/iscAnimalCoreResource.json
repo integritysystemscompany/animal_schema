@@ -8,12 +8,12 @@
     "allOf": [
         {
             "$ref": "icarAnimalCoreResource.json"
-        },
-        {
+        }
+    ],
             "properties": {
                 "birthDateConfidence": {
                     "type": "string",
-                    "description": "3-character string with positional characters represeting Year, Month, and Day (YMD)"
+                    "description": "3-character string with positional characters representing Year, Month, and Day (YMD)"
                 },
                 "birthRank": {
                     "type": "number",
@@ -27,7 +27,7 @@
                 },
                 "birthCohort": {
                     "type": "number",
-                    "description": "The contempory group or cohort that describes the season within the birth year into which animals are categorised."
+                    "description": "The contemporary group or cohort that describes the season within the birth year into which animals are categorized."
                 },
                 "preBirthMob": {
                     "type": "number",
@@ -63,6 +63,4 @@
                     "description":"Date and time animal was desexed (change to gender value)."
                 }
             }
-        }
-    ]
 }
