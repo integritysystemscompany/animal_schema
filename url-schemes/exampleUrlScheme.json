@@ -77,7 +77,7 @@
   "components": {
     "schemas": {
       "iscAnimalCore": {
-        "$ref": "../resources/iscAnimalCore.json"
+        "$ref": "../resources/iscAnimalCoreResource.json"
       },
       "iscScoreReference": {
         "$ref": "../resources/iscScoreEventCoreResource.json"
