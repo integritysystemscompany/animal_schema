@@ -1,15 +1,15 @@
 {
-    "required": [
-
-    ],
-
-    "type": "object",
-
     "allOf": [
         {
             "$ref": "icarAnimalCoreResource.json"
-        }
-    ],
+        },
+        {        
+            "type": "object",
+
+            "required": [
+
+            ],
+
             "properties": {
                 "birthDateConfidence": {
                     "type": "string",
@@ -63,4 +63,6 @@
                     "description":"Date and time animal was desexed (change to gender value)."
                 }
             }
+        }
+    ]
 }
