@@ -1,11 +1,11 @@
 {
-    "description": "Defines a medicine (and eventually withdrawal and application information).",
     "allOf": [
         {
             "$ref": "icarResource.json"
         },
         {
             "type": "object",
+            "description": "Defines a medicine (and eventually withdrawal and application information).",
             "properties": {
                 "name": {
                     "type": "string",

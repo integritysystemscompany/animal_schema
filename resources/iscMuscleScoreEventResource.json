@@ -1,12 +1,11 @@
 {
-    "description": "Muscle score observation for an animal using the MLA muscle score scheme.",
-
     "allOf": [
         {
             "$ref": "icarEventCoreResource.json"
         },
         {
             "type": "object",
+            "description": "Muscle score observation for an animal using the MLA muscle score scheme.",
             "properties": {
                 "score":{
                     "type": "string",

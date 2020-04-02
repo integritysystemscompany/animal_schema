@@ -1,11 +1,11 @@
 {
-    "required": ["arrivalReason", "animalDetail"],
-    "type": "object",
     "allOf": [
         {
             "$ref": "icarEventCoreResource.json"
         },
         {
+            "required": ["arrivalReason", "animalDetail"],
+            "type": "object",
             "properties": {
                 "arrivalReason":{
                     "type": "object",

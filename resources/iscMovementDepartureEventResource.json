@@ -1,11 +1,11 @@
 {
-    "required": ["departureKind", "departureReason"],
-    "type": "object",
     "allOf": [
         {
             "$ref": "icarEventCoreResource.json"
         },
         {
+            "required": ["departureKind", "departureReason"],
+            "type": "object",
             "properties": {
                 "departureKind":{
                     "type": "object",

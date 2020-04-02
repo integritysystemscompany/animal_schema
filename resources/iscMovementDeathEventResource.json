@@ -1,11 +1,11 @@
 {
-    "required": ["deathReason", "disposalMethod", "disposalReference"],
-    "type": "object",
     "allOf": [
         {
             "$ref": "icarEventCoreResource.json"
         },
         {
+            "required": ["deathReason", "disposalMethod", "disposalReference"],
+            "type": "object",
             "properties": {
                 "deathReason": {
                     "type": "object",
